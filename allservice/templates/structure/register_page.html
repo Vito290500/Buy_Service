@@ -1,0 +1,88 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'style/register_page.css' %}">
+</head>
+<body>
+    <nav class="nav-bar">   
+        <a href="{% url 'home-page' %}" class="nav-title">All Vito's Service</a>
+
+        <div class="nav-tools">
+            <button class="nav-login"><a href="{% url 'login-page' %}">login</a></button>
+        </div>
+    </nav>
+
+        {% if check_email_message %}
+            <div class="message-section">
+                <p class="check_email">{{ check_email_message }}</p>
+            </div>
+        {% endif %}
+
+        {% if message_validate %}
+            <div class="message-section">
+                <p class="validate">{{ message_validate }}</p>
+            </div>
+        {% endif %}
+        
+        {% if message_not_validate %}
+            <div class="message-section">
+                <p class="not_validate">{{ message_not_validate }}</p>
+            </div>
+        {% endif %}
+
+
+    <div class="register-section">
+        <form action="{% url 'register-page' %}" method="POST">
+            {% csrf_token %}
+            <h1>Sign Up</h1>
+            <div class="username">
+                <div class="username-image">
+                    <img src="https://icones.pro/wp-content/uploads/2021/02/icone-utilisateur-gris.png" alt="" width="40px" height="40px">
+                </div>
+                <input class="username-input" type="text" placeholder="Username" name="username">
+            </div>
+
+            <hr class="orizontal">
+
+            <div class="email">
+                <div class="username-image">
+                    <img src="https://icones.pro/wp-content/uploads/2021/02/icone-de-courrier-electronique-gris.png" alt="" width="40px" height="40px">
+                </div>
+                <input class="email-input" type="email" placeholder="email" name="email">
+            </div>
+
+            <hr class="orizontal">
+
+            <div class="password">
+                <div class="username-image">
+                    <img src="https://cdn1.iconfinder.com/data/icons/money-an-icon2/164/5-512.png" alt="" width="40px" height="40px">
+                </div>
+                <input class="password-input" type="password" placeholder="password" name="password">
+            </div>
+
+            <hr class="orizontal">
+
+
+            <div class="confirm_password">
+                <div class="username-image">
+                    <img src="https://cdn1.iconfinder.com/data/icons/money-an-icon2/164/5-512.png" alt="" width="40px" height="40px">
+                </div>
+                <input class="confirm-input" type="password" placeholder="confirm password" name="confirm_password">
+            </div>
+
+            <hr class="orizontal">
+
+            <button class="sign-up-button" type="submit">SIGN UP</button>
+            <div class="have_account">
+                <p>Arleady have an account?<a href="{% url 'login-page' %}">Sign In</a></p>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

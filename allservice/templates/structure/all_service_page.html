@@ -1,0 +1,165 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All_Service</title>
+    <link rel="stylesheet" href="{% static 'style/all_service_page.css' %}">
+</head>
+<body>  
+    <nav class="nav-bar">   
+        <a href="{% url 'home-page' %}" class="nav-title">All Vito's Service</a>
+
+        <div class="nav-tools">
+            {% if profile_username %}
+                <button class="nav-logout">log out</button>
+                <button class="nav-profile">{{ profile_username }}</button>
+            {% else %}            
+                <button class="nav-login"><a href="{% url 'login-page' %}">login</a></button>
+                <button class="nav-sign"><a href="{% url 'register-page' %}">sign up</a></button>
+            {% endif %}
+        </div>
+    </nav>
+
+    <div class="background-image">
+    </div>
+
+    <div class="card-explain-service">
+        <h1>PLANS  &  PRICING</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi repudiandae fuga similique ea illum adipisci, hic, quisquam maxime, quidem ut repellat voluptate quasi repellendus quos. Molestiae harum expedita saepe commodi.</p>
+    </div>
+
+
+    <div class="pricing-table">
+        <div class="table-basic">
+            <h2>BASIC</h2>
+            <p>Lorem ipsum dolor sit</p>
+            <div class="button-basic">
+                <p class="price">$9.99</p>
+                <p class="time">/mo</p>
+            </div>
+            <div class="content">
+                <div>
+                    <p>✔️</p>
+                    <p>10 gb Space</p>
+                </div>
+                <div>
+                    <p>✔️</p>
+                    <p>3 Website</p>
+                </div>
+                <div>
+                    <p>✔️</p>
+                    <p>10 Database</p>
+                </div>
+                <div>
+                    <p>✔️</p>
+                    <p>10 Emails</p>
+                </div>
+                <div>
+                    <p>❌</p>
+                    <p>Unlimited Subdomain</p>
+                </div>
+                <div>
+                    <p>❌</p>
+                    <p>Unlimited Bandwith</p>
+                </div>
+                <div>
+                    <p>✔️</p>
+                    <p>24/7 Support</p>
+                </div>
+            </div>
+            <button class="buy-basic-button">Buy Now</button>
+        </div>
+
+        <div class="table-standard">
+            <div class="popular">
+                <p id="rotate-popular">popular</p>
+            </div>
+
+            <h2 id="standard-title">STANDARD</h2>
+            <p>Lorem ipsum dolor sit</p>
+            <div class="button-standard">
+                <p class="price">$39.99</p>
+                <p class="time">/mo</p>
+            </div>
+            <div class="content">
+                <div>
+                    <p>✔️</p>
+                    <p>50 gb Space</p>
+                </div>
+                <div>
+                    <p>✔️</p>
+                    <p>10 Website</p>
+                </div>
+                <div>
+                    <p>✔️</p>
+                    <p>50 Database</p>
+                </div>
+                <div>
+                    <p>✔️</p>
+                    <p>100 Emails</p>
+                </div>
+                <div>
+                    <p>❌</p>
+                    <p>Unlimited Subdomain</p>
+                </div>
+                <div>
+                    <p>❌</p>
+                    <p>Unlimited Bandwith</p>
+                </div>
+                <div>
+                    <p>✔️</p>
+                    <p>24/7 Support</p>
+                </div>
+            </div>
+            <button class="buy-standard-button">Buy Now</button>
+        </div>
+
+
+
+        <div class="table-premium">
+            <h2>PREMIUM</h2>
+            <p>Lorem ipsum dolor sit</p>
+            <div class="button-premium">
+                <p class="price">$79.99</p>
+                <p class="time">/mo</p>
+            </div>
+            <div class="content">
+                <div>
+                    <p>✔️</p>
+                    <p>150 gb Space</p>
+                </div>
+                <div>
+                    <p>✔️</p>
+                    <p>50 Website</p>
+                </div>
+                <div>
+                    <p>✔️</p>
+                    <p>100 Database</p>
+                </div>
+                <div>
+                    <p>✔️</p>
+                    <p>200 Emails</p>
+                </div>
+                <div>
+                    <p>✔️</p>
+                    <p>Unlimited Subdomain</p>
+                </div>
+                <div>
+                    <p>✔️</p>
+                    <p>Unlimited Bandwith</p>
+                </div>
+                <div>
+                    <p>✔️</p>
+                    <p>24/7 Support</p>
+                </div>
+            </div>
+            <button class="buy-premium-button">Buy Now</button>
+        </div>
+    </div>
+
+
+</body>
+</html>

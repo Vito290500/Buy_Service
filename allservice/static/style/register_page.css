@@ -1,0 +1,156 @@
+body{
+    background-color:rgb(55, 55, 55);
+}
+.nav-bar{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(32, 32, 32);
+    box-shadow: 2px 2px 8px 0px rgb(26, 26, 26);
+}
+.nav-login{
+    background-color: rgb(32, 32, 32);
+    font-size: 20px;
+    border: none;
+    width: 100px;
+    height: 30px;
+}
+.nav-login a{
+    text-decoration: none;
+    color: white;
+}
+.nav-title{
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+    text-decoration: none;
+}
+.nav-title:active{
+    color: rgb(100, 0, 193);
+}
+.nav-tools{
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+}
+.nav-login:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.nav-login a:active{
+    color: rgb(100, 0, 193);
+}
+.register-section{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 45%;
+    left: 50%;
+    width: 400px;
+    height: 680px;
+    background-color: rgb(32, 32, 32);
+    box-shadow: 2px 2px 8px 6px rgb(26, 26, 26);
+    text-align: center;
+}
+.register-section h1{
+    color: grey;
+    margin-top: 4rem;
+    font-weight: bold;
+}
+.username{
+    display: flex;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 4rem;
+}
+.email,
+.password,
+.confirm_password{
+    display: flex;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 1.5rem;
+}
+.username-input,
+.email-input,
+.password-input,
+.confirm-input{
+    background-color: rgb(32, 32, 32);
+    color: white;
+    border: none;
+    font-size: 20px;
+    margin-left: 2rem;
+    width: 80%;
+}
+.username-input:focus,
+.email-input:focus,
+.password-input:focus,
+.confirm-input:focus{
+    outline: none;
+    background-color: rgb(64, 0, 124);
+}
+
+
+.username-img{
+    width: 20%;
+}
+.username-img img{
+    color: grey;
+}
+.orizontal{
+    width: 80%;
+    margin-left: 10%;
+    color: rgb(107, 107, 107);
+}
+.sign-up-button{
+    margin-top: 3rem;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    background-color: rgb(32, 32, 32);
+    border: 2px solid grey;
+    color: grey;
+}
+.sign-up-button:hover{
+    cursor: pointer;
+}
+.sign-up-button:active{
+    transform: scale(1.1);
+}
+.have_account p{
+    color: grey;
+}
+.have_account p a{
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    color: white;
+    text-decoration: none;
+}
+.have_account p a:active{
+    color: rgb(100, 0, 193);
+}
+
+.message-section{
+    position: absolute;
+    top: 10rem;
+    width: 60%;
+    height: 80px;
+    margin-left: 20%;
+    text-align: center;
+    font-size: 25px;
+    background-color: rgb(32, 32, 32);
+    box-shadow: 2px 2px 8px 6px rgb(26, 26, 26);
+}
+.message-section .validate{
+    color: green;
+}
+.message-section .not_validate{
+    color: rgb(214, 37, 37);
+}
+.message-section .check_email{
+    color: grey;
+}

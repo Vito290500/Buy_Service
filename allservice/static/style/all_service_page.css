@@ -1,0 +1,269 @@
+body{
+    background-color:rgb(55, 55, 55) ;
+}
+.nav-bar{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(32, 32, 32);
+    box-shadow: 2px 2px 8px 0px rgb(26, 26, 26);
+}
+.nav-title{
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+    text-decoration: none;
+}
+.nav-title:hover,
+.nav-title:active{
+    color: rgb(100, 0, 193);
+}
+.nav-tools{
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+}
+
+
+.nav-sign,
+.nav-profile{
+    font-size: 20px;
+    background-color: rgb(38, 0, 74);
+    border: none;
+    border-radius: 40px;
+    height: 31.5px;
+    width: 100px;
+}
+.nav-login,
+.nav-logout{
+    background-color: rgb(32, 32, 32);
+    font-size: 20px;
+    border: none;
+    width: 100px;
+    height: 30px;
+}
+.nav-login a,
+.nav-sign a{
+    text-decoration: none;
+    color: white;
+}
+.nav-profile,
+.nav-logout{
+    color: white;
+}
+
+.nav-sign:hover,
+.nav-login:hover,
+.nav-profile:hover,
+.nav-logout:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.nav-login:active{
+    color: rgb(100, 0, 193);
+}
+.nav-sign:active{
+    background-color: rgb(100, 0, 193);
+    color: white;
+}
+.card-explain-service{
+    position: absolute;
+    top: 15rem;
+    width: 80%;
+    height: 500px;
+    margin-left: 10%;
+    text-align: center;
+}
+.card-explain-service h1{
+    background: linear-gradient(45deg, rgb(38, 0, 74), rgb(74, 0, 144));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 48px;
+}
+.card-explain-service p{
+    font-size: 20px;
+    color: rgb(174, 174, 174);
+}
+
+
+
+.pricing-table{
+    position: absolute;
+    top: 35rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;   
+}
+.table-basic,
+.table-standard,
+.table-premium{
+    text-align: center;
+    width: 300px;
+    height: 650px;
+    background-color: rgb(244, 244, 244);
+    margin-right: 1.5rem;    
+    border-radius: 20px;
+    box-shadow: 2px 1px 6px 1px rgb(141, 141, 141);
+}
+.table-basic:hover,
+.table-standard:hover,
+.table-premium:hover{
+    transform: scale(1.1);
+}
+.pricing-table div h2{
+    color: rgb(110, 110, 110);
+    margin-top: 2.5rem;
+    font-size: 35px;
+}
+.pricing-table div p{
+    color: grey;
+    margin-top: -1rem;
+    font-size: 20px;
+}
+.button-basic{
+    margin-top: 2.5rem;
+    background-color: orangered;
+    width: 250px;
+    height: 60px;
+    display: flex;
+    border-radius: 40px;
+    margin-left: 25px;
+}
+.button-basic .price{
+    margin-top: 0.3rem;
+    font-size: 45px;
+    color: rgb(245, 245, 245);
+    font-weight: bold;
+    margin-left: 4rem;
+}
+.button-basic .time{
+    margin-top: 1.6rem;
+    margin-left: 0.2rem;
+    font-size: 20px;
+    color: rgb(222, 222, 222);
+}
+.content{
+    margin-top: 3rem;
+    margin-left: 3rem;
+}
+.content div{
+    display: flex;
+    margin-top: 0.6rem;
+}
+.content div p{
+    margin-right: 0.5rem;
+}
+.buy-basic-button{
+    background-color: orangered;
+    border-radius: 40px;
+    font-size: 20px;
+    border: none;
+    height: 30px;
+    width: 120px;
+    color: white;
+    margin-top: 2rem;
+}
+.buy-basic-button:hover{
+    cursor: pointer;
+    background-color: rgb(255, 92, 32);
+}
+
+
+.popular{
+    margin-left: 14rem;
+    margin-top: 1.85rem;
+    width: 50px;
+    height: 0px;
+    background-color:rgb(0, 193, 193);
+    transform: rotatez(45deg);
+    border-bottom: 25px solid transparent;
+    border-right: 25px solid rgb(216, 216, 216);
+    border-left: 25px solid rgb(216, 216, 216);
+    border-color: transparent transparent rgb(0, 193, 193) transparent;
+    background: linear-gradient(45deg, transparent 49%, rgb(0, 193, 193) 51%);
+}
+#rotate-popular{
+    color: white;
+}
+#standard-title{
+    margin-top: 0.1rem;
+}
+.button-standard{
+    margin-top: 2.5rem;
+    background-color: rgb(0, 193, 193);
+    width: 250px;
+    height: 60px;
+    display: flex;
+    border-radius: 40px;
+    margin-left: 25px;
+}
+.button-standard .price{
+    margin-top: 0.5rem;
+    font-size: 40px;
+    color: rgb(245, 245, 245);
+    font-weight: bold;
+    margin-left: 3.5rem;
+}
+.button-standard .time{
+    margin-top: 1.6rem;
+    margin-left: 0.2rem;
+    font-size: 20px;
+    color: rgb(222, 222, 222);
+}
+.buy-standard-button{
+    background-color:  rgb(0, 193, 193);
+    border-radius: 40px;
+    font-size: 20px;
+    border: none;
+    height: 30px;
+    width: 120px;
+    color: white;
+    margin-top: 2rem;
+}
+.buy-standard-button:hover{
+    cursor: pointer;
+    background-color: rgb(0, 211, 211);
+}
+
+.button-premium{
+    margin-top: 2.5rem;
+    background-color: rgb(255, 191, 0);
+    width: 250px;
+    height: 60px;
+    display: flex;
+    border-radius: 40px;
+    margin-left: 25px;
+}
+.button-premium .price{
+    margin-top: 0.5rem;
+    font-size: 40px;
+    color: rgb(245, 245, 245);
+    font-weight: bold;
+    margin-left: 3.5rem;
+}
+.button-premium .time{
+    margin-top: 1.6rem;
+    margin-left: 0.2rem;
+    font-size: 20px;
+    color: rgb(222, 222, 222);
+}
+.buy-premium-button{
+    background-color:  rgb(255, 191, 0);
+    border-radius: 40px;
+    font-size: 20px;
+    border: none;
+    height: 30px;
+    width: 120px;
+    color: white;
+    margin-top: 2rem;
+}
+.buy-premium-button:hover{
+    cursor: pointer;
+    background-color: rgb(255, 196, 19);
+}
