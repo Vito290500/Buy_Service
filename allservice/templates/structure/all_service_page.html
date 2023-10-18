@@ -14,8 +14,35 @@
 
         <div class="nav-tools">
             {% if profile_username %}
-                <button class="nav-logout">log out</button>
-                <button class="nav-profile">{{ profile_username }}</button>
+                <button class="nav-logout"><a href="{% url 'login-page' %}">log out</a></button>
+                <button class="nav-profile"><a href="#" id="openCurtainButton">{{ profile_username.username }}</a></button>
+                <div class="curtain" id="curtain">
+                    <div class="curtain-content">
+                        <a href="#" class="email">Email</a>
+                        <hr>
+                        <a href="#">Password</a>
+                        <hr>
+                        <a href="#">Settings</a>
+                        <hr>
+                        <button id="closeCurtainButton" class="close-curtain">Close Curtain</button>
+                    </div>
+                </div>
+
+                <script>
+                    const openCurtainButton = document.getElementById('openCurtainButton');
+                    const closeCurtainButton = document.getElementById('closeCurtainButton');
+                    const curtain = document.getElementById('curtain');
+
+                    openCurtainButton.addEventListener('click', function () {
+                        curtain.style.display = 'block';
+                    });
+
+                    closeCurtainButton.addEventListener('click', function () {
+                        curtain.style.display = 'none';
+                    });
+                </script>
+                
+           
             {% else %}            
                 <button class="nav-login"><a href="{% url 'login-page' %}">login</a></button>
                 <button class="nav-sign"><a href="{% url 'register-page' %}">sign up</a></button>

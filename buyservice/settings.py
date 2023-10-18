@@ -130,4 +130,4 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'vitodivenosawork@gmail.com' 
 EMAIL_HOST_PASSWORD = 'ndko nzzy vobb zndt'
 
-SESSION_COOKIE_AGE = 60 
+SESSION_COOKIE_AGE = 1800

@@ -16,22 +16,10 @@
             <button class="nav-register"><a href="{% url 'register-page' %}">Sign Up</a></button>
         </div>
     </nav>
-
-        {% if check_email_message %}
+    
+        {% if message %}
             <div class="message-section">
-                <p class="check_email">{{ check_email_message }}</p>
-            </div>
-        {% endif %}
-
-        {% if message_validate %}
-            <div class="message-section">
-                <p class="validate">{{ message_validate }}</p>
-            </div>
-        {% endif %}
-        
-        {% if message_not_validate %}
-            <div class="message-section">
-                <p class="not_validate">{{ message_not_validate }}</p>
+                <p class="not_validate">{{ message }}</p>
             </div>
         {% endif %}
 

@@ -9,9 +9,17 @@ from .models import User_Profile
 # Create your views here.
 class All_Service(View):
     def get(self, request):
-        return render(request, "structure/all_service_page.html")
 
-def Check_valid_user_input(self, user_input):
+        if request.session['user_session_id'] :
+            get_data = User_Profile.objects.get(pk = request.session['user_session_id'])
+            
+            return render(request, "structure/all_service_page.html",{
+                "profile_username" : get_data,
+            })
+        else:
+            return render(request, "structure/all_service_page.html")
+
+def Check_valid_user_input(user_input):
     
     message_validate_status = {}
 
@@ -38,7 +46,7 @@ def Check_Password(request):
                 "message_not_validate" : "The password are not the same."
             })
     
-def Email_validate(self, request, email):
+def Email_validate(request, email):
 
     link_for_check= request.build_absolute_uri(reverse('confirm-email')) 
 
@@ -103,8 +111,7 @@ class RegisterPage(View):
                  return render(request, "structure/register_page.html",{
                     "message_not_validate" : "Email arleady exists."
                 })
-            
-
+        
 class Login(View):
     
     def get(self, request):
@@ -122,18 +129,23 @@ class Login(View):
                     "message": "Email wrong, please check the syntax or register."
                 })
         
-            elif user_input['password'] != user_database['password']:
+            elif user_input['password'] != get_data.password:
                 return render(request, "structure/login.html",{
                     "message": "Password wrong, please check the syntax."
                 })
         
             else:
+                request.session['user_session_id'] = get_data.pk
+
                 return render(request, "structure/all_service_page.html",{
-                    "profile_username" : user_input['username']
+                    "profile_username" : get_data,
                 })
             
+
+
             
-
-
+class Logout(View):
+    def get(self, request):
+        pass
 
         
