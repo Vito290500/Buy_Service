@@ -14,7 +14,7 @@
 
         <div class="nav-tools">
             {% if profile_username %}
-                <button class="nav-logout"><a href="{% url 'login-page' %}">log out</a></button>
+                <button class="nav-logout"><a href="{% url 'logout-page' %}">log out</a></button>
                 <button class="nav-profile"><a href="#" id="openCurtainButton">{{ profile_username.username }}</a></button>
                 <div class="curtain" id="curtain">
                     <div class="curtain-content">

@@ -141,11 +141,11 @@ class Login(View):
                     "profile_username" : get_data,
                 })
             
-
-
-            
+      
 class Logout(View):
     def get(self, request):
-        pass
+        del request.session['user_session_id']  
+
+        return render(request, "structure/all_service_page.html")  
 
         
