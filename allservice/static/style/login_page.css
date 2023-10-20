@@ -153,3 +153,20 @@ body{
 .message-section .check_email{
     color: grey;
 }
+
+.forgot{
+    margin-left: -12rem;
+    margin-bottom: -0.5rem;
+    text-decoration: none;
+}
+.forgot a{
+    text-decoration: none;
+    color: grey;
+}
+.forgot:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.forgot:active{
+    color: rgb(64, 0, 124);
+}

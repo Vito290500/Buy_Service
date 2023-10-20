@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All_Service</title>
+    <link rel="stylesheet" href="{% static 'style/account.css' %}">
+</head>
+<body>  
+    <nav class="nav-bar">   
+        <a href="{% url 'home-page' %}" class="nav-title">All Vito's Service</a>
+
+        <div class="nav-tools">
+            <button class="nav-settings"><a href="#">Settings</a></button>
+            <button class="nav-logout"><a href="{% url 'logout-page' %}">log out</a></button>
+        </div>
+        
+        <div class="Account-info">
+            <div class="image-account"><img src="https://cdn5.vectorstock.com/i/1000x1000/27/89/user-account-flat-icon-vector-14992789.jpg" alt="" width="400px" height="400px"></div>
+            <div class="content">
+                <div class="username">
+                    <p class="field-name">Username</p>
+                    <p class="field-value"> #username</p>
+                    <button class="field-button">🖌️</button>
+                </div>
+                <hr>
+                <div class="email">
+                    <p class="field-name">Email</p>
+                    <p class="field-value"> #user_email</p>
+                    <button class="field-button">🖌️</button>
+                </div>
+                <hr>
+                <div class="password">
+                    <p class="field-name">Password</p>
+                    <p class="field-value"> ***** </p>
+                    <button class="field-button">🖌️</button>
+                </div>
+                <hr>
+                <div class="cell">
+                    <p class="field-name">Cell</p>
+                    <p class="field-value"> +39 340******</p>
+                    <button class="field-button">🖌️</button>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>

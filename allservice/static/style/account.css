@@ -1,0 +1,126 @@
+body{
+    background-color:rgb(55, 55, 55) ;
+}
+.nav-bar{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(32, 32, 32);
+    box-shadow: 2px 2px 8px 0px rgb(26, 26, 26);
+}
+.nav-title{
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+    text-decoration: none;
+}
+.nav-title:hover,
+.nav-title:active{
+    color: rgb(100, 0, 193);
+}
+.nav-tools{
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+}
+.nav-sign{
+    font-size: 20px;
+    background-color: rgb(38, 0, 74);
+    border: none;
+    border-radius: 40px;
+    height: 31.5px;
+    width: 100px;
+}
+.nav-profile{
+    font-size: 20px;
+    background-color: rgb(38, 0, 74);
+    border: none;
+    height: 31.5px;
+    width: 120px;
+    box-shadow: 2px 2px 8px 0px rgb(26, 26, 26);
+}
+.nav-login,
+.nav-logout,
+.nav-settings{
+    background-color: rgb(32, 32, 32);
+    font-size: 20px;
+    border: none;
+    width: 100px;
+    height: 30px;
+}
+.nav-login a,
+.nav-sign a,
+.nav-profile a,
+.nav-logout a,
+.nav-settings a{
+    text-decoration: none;
+    color: white;
+}
+.nav-sign:hover,
+.nav-login:hover,
+.nav-logout:hover,
+.nav-settings:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.nav-login:active{
+    color: rgb(100, 0, 193);
+}
+.nav-sign:active{
+    background-color: rgb(100, 0, 193);
+    color: white;
+}
+
+
+.image-account{
+    position: absolute;
+    top: 10rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.content{
+    position: absolute;
+    top: 40rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background-color: rgb(32, 32, 32);
+    box-shadow: 2px 2px 8px 6px rgb(26, 26, 26);
+    width: 700px;
+    height: 580px;
+}
+.username,
+.email,
+.password,
+.cell{
+    display: flex;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    font-size: 20px;
+    color: white;
+}
+.field-name{
+    position: absolute;
+    left: 2rem;
+}
+.field-value{
+    position: absolute;
+    left: 18rem;
+}
+.field-button{
+    background-color: rgb(32, 32, 32);
+    color: white;
+    font-size: 20px;
+    border: none;
+    margin-top: 1rem;
+    margin-left: 40rem;
+    border-radius: 20px;
+}
+.field-button:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}

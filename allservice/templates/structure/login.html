@@ -16,6 +16,12 @@
             <button class="nav-register"><a href="{% url 'register-page' %}">Sign Up</a></button>
         </div>
     </nav>
+        {% if message_validate %}
+            <div class="message-section">
+                <p class="validate">{{ message_validate }}</p>
+            </div>
+        {% endif %}
+
     
         {% if message %}
             <div class="message-section">
@@ -51,8 +57,8 @@
                     </div>
                     <input class="password-input" type="password" placeholder="password" name="password">
                 </div>
-    
                 <hr class="orizontal">
+                <p class="forgot"><a href="{% url 'forgot-password' %}">Forgot password?</a></p>
     
                 <button class="sign-up-button" type="submit">SIGN IN</button>
                 <div class="have_account">
