@@ -10,6 +10,7 @@ urlpatterns = [
     path("logout", views.Logout.as_view(), name="logout-page"),
     path("account",  views.AccountInfo.as_view(), name="account-page"),
     path("forgot_password", views.ForgotPassword.as_view(), name="forgot-password"),
-    path("password_reset" , views.PasswordReset.as_view(), name="password-reset")
+    path("password_reset" , views.PasswordReset.as_view(), name="password-reset"),
+    path("transaction_start", views.TransactionStart.as_view(), name="transaction-start-page")
 ]
 

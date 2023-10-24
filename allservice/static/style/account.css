@@ -124,3 +124,40 @@ body{
     cursor: pointer;
     transform: scale(1.2);
 }
+
+.saldo{
+    position: absolute;
+    top: 80rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background-color: rgb(32, 32, 32);
+    box-shadow: 2px 2px 8px 6px rgb(26, 26, 26);
+    width: 700px;
+    height: 250px;
+}
+.current-saldo,
+.status{
+    display: flex;
+    color: white;
+    font-size: 20px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.field-button-rec{
+    background-color: rgb(100, 0, 193);
+    color: white;
+    font-size: 20px;
+    border: none;
+    margin-top: 1rem;
+    margin-left: 37rem;
+    border-radius: 20px;
+}
+.field-button-rec:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.field-button-rec a{
+    text-decoration: none;
+    color: white;
+}

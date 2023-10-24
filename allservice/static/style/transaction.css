@@ -1,0 +1,90 @@
+body{
+    background-color:rgb(55, 55, 55) ;
+}
+.back{
+    font-size: 30px;
+    position: absolute;
+    top: 0rem;
+    left: 2rem;
+}
+.back a{
+    text-decoration: none;
+}
+.back:hover{
+    transform: scale(1.1)
+}
+.benefit-content div{
+    display: flex;
+    margin-left: 30%;
+    color: white;
+}
+.benefit-content div p{
+    margin-right: 1rem;
+}
+.content{
+    display: flex;
+}
+.plan-benefit{
+    position: absolute;
+    left: 8rem;
+    top: 8rem;
+    background-color: rgb(32, 32, 32);
+    height: 600px;
+    width: 400px;
+    box-shadow: 2px 2px 8px 0px rgb(26, 26, 26);
+    text-align: center;
+}
+.plan-benefit h1{
+    color: rgb(160, 59, 255);
+}
+.payment{
+    position: absolute;
+    right: 9.4rem;
+    margin-top: 7.5rem;
+    height: 600px;
+    box-shadow: 2px 2px 8px 0px rgb(26, 26, 26);
+    background-color: rgb(41, 41, 41);
+    width: 400px;
+    text-align: center;
+}
+.benefit-content h2{
+    color: white;
+    margin-left: -4rem;
+    margin-top: 4rem;
+}
+.payment h1{
+    color:  white;
+}
+.payment-content{
+    margin-left: -1rem;
+    margin-top: 4rem;
+    font-size: 20px;
+}
+.payment-content div{
+    display: flex;
+    margin-left: 6rem;
+}
+.field-name{
+    color: rgb(160, 59, 255);
+}
+.field-value {
+    color: white;
+    position: absolute;
+    right: 4.5rem;
+}
+.confirm{
+    background-color: rgb(160, 59, 255);
+    border: none;
+    width: 130px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+}
+.confirm:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.confirm a{
+    text-decoration: none;
+    color: white;
+}

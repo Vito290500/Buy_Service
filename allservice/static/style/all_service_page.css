@@ -274,6 +274,12 @@ body{
     cursor: pointer;
     background-color: rgb(0, 211, 211);
 }
+.buy-basic-button a,
+.buy-standard-button a,
+.buy-premium-button a{
+    text-decoration: none;
+    color: white;
+}
 .button-premium{
     margin-top: 2.5rem;
     background-color: rgb(255, 191, 0);

@@ -1,0 +1,200 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction</title>
+    <link rel="stylesheet" href="{% static 'style/transaction.css' %}">
+</head>
+<body>
+    <div class="content">
+        <p class="back"><a href="{% url 'home-page' %}">🔙</a></p>
+        <div class="plan-benefit">
+            <h1>{{ button_value|upper }} PLAN</h1>
+            <div class="benefit-content">
+                {% if button_value == 'basic' %}
+                    <h2>BENEFIT</h2>
+                    <div>
+                        <p>✔️</p>
+                        <p>10 gb Space</p>
+                    </div>
+                    <div>
+                        <p>✔️</p>
+                        <p>3 Website</p>
+                    </div>
+                    <div>
+                        <p>✔️</p>
+                        <p>10 Database</p>
+                    </div>
+                    <div>
+                        <p>✔️</p>
+                        <p>10 Emails</p>
+                    </div>
+                    <div>
+                        <p>❌</p>
+                        <p>Unlimited Subdomain</p>
+                    </div>
+                    <div>
+                        <p>❌</p>
+                        <p>Unlimited Bandwith</p>
+                    </div>
+                    <div>
+                        <p>✔️</p>
+                        <p>24/7 Support</p>
+                    </div>
+
+                {% elif button_value == 'standard' %}
+                    <h2>BENEFIT</h2>
+                    <div>
+                        <p>✔️</p>
+                        <p>50 gb Space</p>
+                    </div>
+                    <div>
+                        <p>✔️</p>
+                        <p>10 Website</p>
+                    </div>
+                    <div>
+                        <p>✔️</p>
+                        <p>50 Database</p>
+                    </div>
+                    <div>
+                        <p>✔️</p>
+                        <p>100 Emails</p>
+                    </div>
+                    <div>
+                        <p>❌</p>
+                        <p>Unlimited Subdomain</p>
+                    </div>
+                    <div>
+                        <p>❌</p>
+                        <p>Unlimited Bandwith</p>
+                    </div>
+                    <div>
+                        <p>✔️</p>
+                        <p>24/7 Support</p>
+                    </div>
+                {% else %}
+                    <h2>BENEFIT</h2>
+                    <div>
+                        <p>✔️</p>
+                        <p>150 gb Space</p>
+                    </div>
+                    <div>
+                        <p>✔️</p>
+                        <p>50 Website</p>
+                    </div>
+                    <div>
+                        <p>✔️</p>
+                        <p>100 Database</p>
+                    </div>
+                    <div>
+                        <p>✔️</p>
+                        <p>200 Emails</p>
+                    </div>
+                    <div>
+                        <p>✔️</p>
+                        <p>Unlimited Subdomain</p>
+                    </div>
+                    <div>
+                        <p>✔️</p>
+                        <p>Unlimited Bandwith</p>
+                    </div>
+                    <div>
+                        <p>✔️</p>
+                        <p>24/7 Support</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        
+        <div class="payment">
+            <h1>CHECKOUT</h1>
+            <div class="payment-content">
+                {% if button_value == 'basic' %}
+                <div>
+                    <p class="field-name">Username:</p>
+                    <p class="field-value">account name</p>
+                </div>
+                <div>
+                    <p class="field-name">Data start:</p>
+                    <p class="field-value">current data</p>
+                </div>
+                <div>
+                    <p class="field-name">Data end:</p>
+                    <p class="field-value">future data</p>
+                </div>
+                <div>
+                    <p class="field-name">Price:</p>
+                    <p class="field-value">9.99$</p>
+                </div>
+                <div>
+                    <p class="field-name">current balance:</p>
+                    <p class="field-value">......</p>
+                </div>
+                <div>
+                    <p class="field-name">after payment</p>
+                    <p class="field-value">------</p>
+                </div>
+
+                {% elif button_value == 'standard' %}
+                <div>
+                    <p class="field-name">Data start:</p>
+                    <p class="field-value">current data</p>
+                </div>
+                <div>
+                    <p class="field-name">Price:</p>
+                    <p class="field-value">39.99$</p>
+                </div>
+                <div>
+                    <p class="field-name">Current balance:</p>
+                    <p class="field-value">......</p>
+                </div>
+                <div>
+                    <p class="field-name">After payment</p>
+                    <p class="field-value">------</p>
+                </div>
+                {% else %}
+                <div>
+                    <p class="field-name">Data start:</p>
+                    <p class="field-value">current data</p>
+                </div>
+                <div>
+                    <p class="field-name">Price:</p>
+                    <p class="field-value">79.99$</p>
+                </div>
+                <div>
+                    <p class="field-name">Current balance:</p>
+                    <p class="field-value">......</p>
+                </div>
+                <div>
+                    <p class="field-name">After payment</p>
+                    <p class="field-value">------</p>
+                </div>
+                {% endif %}
+            </div>
+            <form action="{% url 'transaction-start-page' %}" method="POST">
+                {% csrf_token %}
+                {% if button_value == 'basic' %}
+                    <input type="hidden" value="basic" id="" name="plan">
+                {% elif button_value == 'standard' %}
+                    <input type="hidden" value="standard" id="" name="plan">
+                {% else %}
+                    <input type="hidden" value="premium" id="" name="plan">
+                {% endif %}
+                <button class="confirm" type="submit"><a href="{% url 'transaction-start-page' %}">CONFIRM</a></button>
+            </form>
+        </div> 
+
+        
+        
+        
+        
+   
+
+
+    </div>
+    
+</body>
+</html>

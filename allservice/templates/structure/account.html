@@ -22,13 +22,13 @@
             <div class="content">
                 <div class="username">
                     <p class="field-name">Username</p>
-                    <p class="field-value"> #username</p>
+                    <p class="field-value">{{ data.username }}</p>
                     <button class="field-button">🖌️</button>
                 </div>
                 <hr>
                 <div class="email">
                     <p class="field-name">Email</p>
-                    <p class="field-value"> #user_email</p>
+                    <p class="field-value"> {{ data.email }}</p>
                     <button class="field-button">🖌️</button>
                 </div>
                 <hr>
@@ -40,9 +40,23 @@
                 <hr>
                 <div class="cell">
                     <p class="field-name">Cell</p>
-                    <p class="field-value"> +39 340******</p>
+                    <p class="field-value"> +39 *********</p>
                     <button class="field-button">🖌️</button>
                 </div>
+            </div>
+        </div>
+
+        <div class="saldo">
+            <div class="current-saldo">
+                <p class="field-name">saldo</p>
+                <p class="field-value">100</p>
+                <button class="field-button-rec">recharge</button>
+            </div>
+            <hr>
+            <div class="status">
+                <p class="field-name">Account Status plan</p>
+                <p class="field-value">free</p>
+                <button class="field-button-rec"><a href="{% url 'home-page' %}">upgrade</a></button>
             </div>
         </div>
 

@@ -151,9 +151,11 @@ class Logout(View):
      
 class AccountInfo(View):
     def get(self, request):
-        return render(request, "structure/account.html")
+        data = User_Profile.objects.get(pk = request.session['user_session_id'])
+        return render(request, "structure/account.html",{
+            "data": data
+        })
     
-
 class ForgotPassword(View):
     def get(self, request):
         return render(request, "structure/forgot-password.html")
@@ -178,7 +180,6 @@ class ForgotPassword(View):
             "message": "Check Email!"
         })
     
-
 class PasswordReset(View):
     def get(self, request):
         return render(request, "structure/reset_password.html")
@@ -212,3 +213,17 @@ class PasswordReset(View):
             return render(request, "structure/reset_password.html",{
                     "message": "Password do not match"
             })
+        
+
+class TransactionStart(View):
+    def get(self, request):
+        button_value = request.GET
+
+        return render(request, "structure/transaction.html",{
+            "button_value": button_value['button_type']
+        })
+    
+    
+    def post(self, request):
+        print(request.POST)
+        return render(request, "structure/transaction_start.html")
